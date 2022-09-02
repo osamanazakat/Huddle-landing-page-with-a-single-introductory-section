@@ -1,0 +1,120 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --ff-heading: 'Poppins';
+  --ff-body: 'Open Sans';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/bg-desktop.svg');
+  background-size: cover;
+  background-color: var(--violet);
+}
+
+.logo {
+  padding: 2.5em;
+  width: 20%;
+}
+
+.main-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  margin-top: 3em;
+}
+
+.mockup-container {
+  flex: 1;
+}
+
+.mockup-container img {
+  height: 50vh;
+}
+
+.text-container {
+  flex: 1;
+  padding: 1em 2em 0;
+  color: white;
+}
+
+.text-container h1 {
+  font-family: var(--ff-heading);
+  font-size: 1.8em;
+  padding-bottom: .8em;
+}
+
+.text-container p {
+  font-family: var(--ff-body);
+  font-size: .9em;
+  padding-bottom: 1.4em;
+}
+
+button {
+  padding: 9px 40px;
+  border: none;
+  border-radius: 20px;
+  font-family: var(--ff-body);
+  color: var(--violet);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: #fff;
+}
+
+.icons {
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3em;
+}
+
+.fa-brands {
+  border: 1px solid #fff;
+  padding: .4em;
+  margin-left: .7em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fa-brands:hover {
+  color: var(--soft-magenta);
+  border: 1px solid var(--soft-magenta);
+}
+@media screen and (max-width: 890px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    padding: 1.5em;
+    width: 35%;
+  }
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: .5em;
+  }
+  .mockup-container img {
+    height: 30vh;
+    margin: auto;
+    flex: 1;
+  }
+  .text-container {
+    flex: 1;
+  }
+  .icons {
+    justify-content: center;
+    padding-bottom: 2em;
+  }
+}
